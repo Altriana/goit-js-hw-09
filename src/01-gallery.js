@@ -87,6 +87,7 @@ const li = document.createElement("li");
     image.className = "gallery-image";
     image.src = preview;
     image.alt = description;
+    image.title = description;
 
     a.appendChild(image);
     li.appendChild(a);
@@ -99,4 +100,4 @@ createGallery({ images });
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
     
-new SimpleLightbox('.gallery-item a');
+new SimpleLightbox('.gallery-item a',{captionDelay: 250});

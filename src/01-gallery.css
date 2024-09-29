@@ -19,9 +19,6 @@ body {
 
 }
 
-.gallery-image:hover {
-    cursor: url(svg.svg), auto;
-}
 
 .gallery-image {
     width: 360px;
@@ -31,4 +28,15 @@ body {
 
 .modal {
     display: none;
+}
+
+.sl-wrapper {
+    background-color: #2E2F42CC;;
+}
+button{
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+}
+.sl-wrapper .sl-counter {
+    color: #FFFFFF !important;
 }
