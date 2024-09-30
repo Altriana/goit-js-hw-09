@@ -19,10 +19,12 @@ body {
     height: 296px; 
     border: none;
     border-radius: 8px;
-    Padding: 24px;
+    Padding: 8px;
     Gap: 16px;
     background-color: white;
     justify-content: center;
+    margin: 0;
+    align-items: center;
 }
 label {
     display: flex;
@@ -40,16 +42,19 @@ textarea {
     border: 1px solid #808080;
     width: 360px;
     height: 80px;
+    resize: none;
 }
 input:hover,
-input:focus,
-textarea:hover,
-textarea:focus {
-    border: 1px solid #000;
+textarea:hover{
+border: 1px solid #000;
+outline: 0;
 }
+input:focus,
+textarea:focus,
 input:active,
 textarea:active {
     border: 1px solid #808080;
+    outline: 0;
 }
 button {
     width: 95px;
@@ -62,6 +67,8 @@ button {
     color: #fff;
     line-height: 24px;
     letter-spacing: 0.08em;
+    align-self: baseline;
+    margin-left: 24px;
 }
 button:hover {
     background-color: #6C8CFF;
