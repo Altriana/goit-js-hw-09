@@ -15,10 +15,15 @@ const localStorageValue = () => {
 form.addEventListener("input", () => {
   localStorageValue();
 });
+
+const localStorage = localStorage.getItem(localStorageKey);
+
+if (localStorage) {
     const objectValue = localStorage.getItem(localStorageKey);
     const value = JSON.parse(objectValue);
     textarea.value = value.message;
-    emailInput.value = value.email; 
+    emailInput.value = value.email;
+};
 
 
 form.addEventListener("submit", (evt) => {
