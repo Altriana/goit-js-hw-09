@@ -16,7 +16,6 @@ form.addEventListener("input", () => {
   localStorageValue();
 });
 
-const localStorage = localStorage.getItem(localStorageKey);
 
 if (localStorage) {
     const objectValue = localStorage.getItem(localStorageKey);
@@ -25,6 +24,7 @@ if (localStorage) {
     emailInput.value = value.email;
 };
 
+const localStorage = localStorage.getItem(localStorageKey);
 
 form.addEventListener("submit", (evt) => {
     evt.preventDefault();
