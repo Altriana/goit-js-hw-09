@@ -1,4 +1,3 @@
-
 const form = document.querySelector(".feedback-form");
 const localStorageKey = "feedback-form-state";
 const emailInput = form.elements.email;
