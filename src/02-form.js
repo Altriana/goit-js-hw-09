@@ -16,15 +16,16 @@ form.addEventListener("input", () => {
   localStorageValue();
 });
 
-
-if (storage) {
-    const objectValue = localStorage.getItem(localStorageKey);
-    const value = JSON.parse(objectValue);
-    textarea.value = value.message;
-    emailInput.value = value.email;
+const getStorage = () => {
+    const storage = localStorage.getItem(localStorageKey);
+    if (storage) {
+        const objectValue = localStorage.getItem(localStorageKey);
+        const value = JSON.parse(objectValue);
+        textarea.value = value.message;
+        emailInput.value = value.email;
+    }
 };
 
-const localStorage = storage.getItem(localStorageKey);
 
 form.addEventListener("submit", (evt) => {
     evt.preventDefault();
