@@ -12,20 +12,18 @@ const localStorageValue = () => {
     localStorage.setItem(localStorageKey, JSON.stringify(object));
 };
 
-form.addEventListener("input", () => {
-  localStorageValue();
-});
-
 const getStorage = () => {
-    const storage = localStorage.getItem(localStorageKey);
-    if (storage) {
-        const objectValue = localStorage.getItem(localStorageKey);
-        const value = JSON.parse(objectValue);
+    const objectValue = localStorage.getItem(localStorageKey);
+    const value = JSON.parse(objectValue);
+    if (value) {
         textarea.value = value.message;
         emailInput.value = value.email;
-    }
-};
-
+    }};
+    
+    form.addEventListener("input", () => {
+        localStorageValue();
+    });
+    getStorage();
 
 form.addEventListener("submit", (evt) => {
     evt.preventDefault();
